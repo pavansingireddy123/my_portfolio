@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan Singi Reddy - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+        .hero { background: #f8f9fa; padding: 60px 0; text-align: center; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+
+        /* Navbar Styling */
+        .navbar { background-color: #6f879f; }
+        .navbar-dark .navbar-nav .nav-link { color: white; }
+        .navbar-dark .navbar-nav .nav-link:hover { color: #48cae4; }
+        
+        /* Card Styling */
+        .card { transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; }
+        .card:hover { transform: scale(1.05); box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); }
+        
+        /* Image Styling */
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Fit images properly */
+        }
+
+        /* Equal Card Heights */
+        .equal-height { display: flex; flex-wrap: wrap; }
+        .equal-height .col-md-3, .equal-height .col-md-6 { display: flex; }
+        .equal-height .card { flex-grow: 1; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">Pavan Singi Reddy</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <img src="myimage.jpeg" class="profile-img" alt="Pavan Singi Reddy">
+            <div class="hero-text">
+                <h1 class="display-4">Hi, I'm Pavan Singi Reddy</h1>
+                <p class="lead">A Passionate Developer & AI Enthusiast</p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/pavan-singireddy-57821b319" target="_blank">
+                        <img src="linkdin.png" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="mailto:pavansingireddy3@gmail.com">
+                        <img src="mail.png" alt="Email" class="social-icon">
+                    </a>
+                    <a href="https://github.com/pavansingireddy" target="_blank">
+                        <img src="github.png" alt="GitHub" class="social-icon">
+                    </a>
+                    <a href="https://leetcode.com/pavan-singi-reddy" target="_blank">
+                        <img src="leetcode.png" alt="LeetCode" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hero Section Styling */
+    .hero {
+        background: url('background1.jpeg') no-repeat center center/cover;
+        position: relative;
+        padding: 80px 0;
+        color: white; /* Ensure text is visible */
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    }
+
+    .hero-content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 260px;
+        height: 320px;
+        border-radius: 15px;
+        object-fit: cover;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-img:hover {
+        transform: scale(1.05);
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-text {
+        flex: 1;
+        padding-left: 50px;
+    }
+
+    .hero-text h1 {
+        white-space: nowrap;
+        margin-bottom: 10px;
+    }
+
+    .hero-text p {
+        margin-bottom: 20px;
+    }
+
+    /* Social Media Icon Styling */
+    .social-icons {
+        display: flex;
+        justify-content: start;
+        gap: 15px;
+        margin-top: 10px;
+        padding-left: 250px;
+    }
+
+    .social-icon {
+        width: 40px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .profile-img {
+            width: 220px;
+            height: 260px;
+        }
+        .hero-text {
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        .hero-text h1 {
+            white-space: normal;
+        }
+        .social-icons {
+            justify-content: center;
+            padding-left: 0;
+        }
+    }
+</style>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="container my-5">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java, Python, C++, C</li>
+            <li>HTML, CSS, JavaScript, MERN</li>
+            <li>Git, Jenkins, Docker, Kubernetes, AWS</li>
+            <li>Machine Learning: GenAI, Neural Networks, CNN</li>
+        </ul>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="container my-5">
+        <h2>Achievements</h2>
+        <div class="row equal-height">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="cnn.jpeg" class="card-img-top" alt="Achievement">
+                    <div class="card-body">
+                        <p class="card-text">Presented a project on Age and Gender Detection Using CNN at a college expo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="nvidia.jpeg" class="card-img-top" alt="Achievement">
+                    <div class="card-body">
+                        <p class="card-text">Completed the Basics of Generative AI course by NVIDIA.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="dsa.jpeg" class="card-img-top" alt="Achievement">
+                    <div class="card-body">
+                        <p class="card-text">Completed DSA course by Apna College in Java.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="undertrial1.jpeg" class="card-img-top" alt="Achievement">
+                    <div class="card-body">
+                        <p class="card-text">Completed the Under-Trial Prisoners project and received certification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container my-5">
+        <h2>Projects</h2>
+        <div class="row equal-height">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="cnn_1.jpeg" class="card-img-top" alt="Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Age and Gender Detection Using CNN</h5>
+                        <p class="card-text">Developed a CNN model to detect age and gender from images.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="undertrial.jpeg" class="card-img-top" alt="Project">
+                    <div class="card-body">
+                        <h5 class="card-title">MERN Stack App for Under-Trial Prisoners</h5>
+                        <p class="card-text">Designed a web app to manage under-trial prisoner data using MERN stack.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="container my-5 text-center">
+    <h2>Contact</h2>
+    <div class="contact-links">
+        <a href="mailto:pavansingireddy3@gmail.com" class="contact-item">
+            <img src="mail.png" alt="Email" class="contact-icon">
+            pavansingireddy3@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/pavan-singireddy-57821b319" class="contact-item" target="_blank">
+            <img src="linkdin.png" alt="LinkedIn" class="contact-icon">
+            Pavan Singi Reddy
+        </a>
+    </div>
+</section>
+
+<style>
+    /* Contact Section Styling */
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        text-decoration: none;
+        color: #333;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .contact-icon {
+        width: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover {
+        color: #0073b1; /* LinkedIn Blue */
+        transform: scale(1.05);
+    }
+
+    .contact-item:hover .contact-icon {
+        transform: scale(1.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .contact-links {
+            gap: 10px;
+        }
+    }
+    </style>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
